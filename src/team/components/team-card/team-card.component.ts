@@ -29,10 +29,10 @@ export class TeamCardComponent implements OnInit {
   }
 
 /**
- * Action déclenchée lors du clic sur le bouton "Est-ce une super équipe ?"
+ * Action déclenchée lors du clic sur le bouton "Evaluer"
  */
-  onClickIsBestTeam(): void {
-
+  onClickEvaluate(): void {
+    
   }
 
 
