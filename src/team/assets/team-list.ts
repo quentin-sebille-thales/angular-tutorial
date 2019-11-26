@@ -17,19 +17,19 @@ export const TEAM_LIST: Team[] = [
   new Team(
     3,
     "Avengers",
-    "La seule équipe Offre de Nanterre",
+    "L'offre de Nanterre",
     TeamDomain.Offre
   ),
   new Team(
     4,
     "Gun's",
-    "Les métiers toujours prêts à dégainer leurs meilleures chorés",
+    "Toujours prêts à dégainer leurs meilleures chorés",
     TeamDomain.Metier
   ),
   new Team(
     5,
     "Bulldozers",
-    "La seule équipe Métier de Lyon",
+    "Un vrai chantier",
     TeamDomain.Metier
   ),
   new Team(6, "Titans", "J'ai pas de jeu de mot, désolé", TeamDomain.Metier)
