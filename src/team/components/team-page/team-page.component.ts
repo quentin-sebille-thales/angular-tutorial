@@ -17,6 +17,10 @@ export class TeamPageComponent implements OnInit {
    * Informations sur l'équipe Tricoteuses
    */
   teamTricoteuses: Team;
+  /**
+   * Message à propos d'une équipe
+   */
+  evaluationMessage: string;
 
   constructor(private teamService: TeamService) {}
 
@@ -34,5 +38,20 @@ export class TeamPageComponent implements OnInit {
       TeamDomain.Offre
     );
     this.teamService.refreshTeamList();
+  }
+
+  displayEvaluation(team: Team): void {
+    this.evaluationMessage = this._evaluateTeam(team);
+  }
+
+  /**
+   * Renvoie un message à propos d'une équipe
+   */
+  private _evaluateTeam(team: Team): string {
+    if (team.id == 2) {
+      return "Certains membres sont des professionnels de la roue (vidéo à l'appui)";
+    }
+
+    return "Pas de rumeur sur cette équipe";
   }
 }

@@ -5,10 +5,11 @@ import { AngularMaterialModule } from "../angular-material/angular-material.modu
 import { TeamCardComponent } from "./components/team-card/team-card.component";
 import { TeamPageComponent } from "./components/team-page/team-page.component";
 import { TeamService } from './services/team.service';
+import { TeamEvaluationMessageComponent } from './components/team-evaluation-message/team-evaluation-message.component';
 
 @NgModule({
   imports: [CommonModule, AngularMaterialModule],
-  declarations: [TeamCardComponent, TeamPageComponent],
+  declarations: [TeamCardComponent, TeamPageComponent, TeamEvaluationMessageComponent],
   exports: [TeamPageComponent],
   providers: [TeamService]
 })
