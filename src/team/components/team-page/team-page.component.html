@@ -1,8 +1,10 @@
 <h1>Liste des équipes du projet</h1>
 
 
-<!-- Message "Evaluation" -->
-<app-team-evaluation-message [rumorsMessage]="rumorsMessage"></app-team-evaluation-message>
+<!-- Equipe sélectionnée -->
+<p *ngIf="displaySelectedTeam">
+  L'équipe sélectionnée est : {{ selectedTeamName }}
+</p>
 
 
 <!-- Liste des équipes (sans service)
@@ -12,5 +14,5 @@
  -->
 
 <!-- Liste des équipes (avec service) -->
-<app-team-card *ngFor="let team of teamService.teamList" [team]="team" (evaluate)="displayEvaluation($event)">
+<app-team-card *ngFor="let team of teamService.teamList" [team]="team" (onSelect)="selectTeam($event)">
 </app-team-card>

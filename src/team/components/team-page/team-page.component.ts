@@ -18,9 +18,13 @@ export class TeamPageComponent implements OnInit {
    */
   teamTricoteuses: Team;
   /**
-   * Rumeurs à propos d'une équipe
+   * Nom de l'équipe sélectionnée
    */
-  rumorsMessage: string;
+  selectedTeamName: string;
+  /**
+   * Affichage de l'équipe sélectionnée.
+   */
+  displaySelectedTeam: boolean;
 
   constructor(private teamService: TeamService) {}
 
@@ -38,23 +42,12 @@ export class TeamPageComponent implements OnInit {
       TeamDomain.Offre
     );
     this.teamService.refreshTeamList();
+    this.displaySelectedTeam = false;
   }
 
-  displayEvaluation(team: Team): void {
-    this.rumorsMessage = this._buildRumors(team);
+  selectTeam(teamName: string): void {
+    this.displaySelectedTeam = true;
+    this.selectedTeamName = teamName;
   }
 
-  /**
-   * Renvoie un message à propos d'une équipe
-   */
-  private _buildRumors(team: Team): string {
-    if (team.id == 1) {
-      return ""
-    }
-    if (team.id == 2) {
-      return "Une vidéo de roue circulerait sur un des membres de cette équipe";
-    }
-
-    return "Pas de rumeur sur cette équipe";
-  }
 }
