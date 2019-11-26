@@ -10,13 +10,18 @@ export class Team {
    */
   name: string;
   /**
+   * Petite description de l'équipe
+   */
+  description: string;
+  /**
    * Domaine (offre / métier)
    */
   domain: TeamDomain;
 
-  constructor(id: number, name: string, domain: TeamDomain) {
+  constructor(id: number, name: string, description: string, domain: TeamDomain) {
     this.id = id;
     this.name = name;
+    this.description = description;
     this.domain = domain;
   }
 
