@@ -1,3 +1,7 @@
-<div *ngIf="displayComponent">
-	<p>Voici l'équipe : {{ teamName }}</p>
-</div>
+<mat-card *ngIf="displayComponent">
+	<mat-card-title>Voici l'équipe : {{ teamName }}</mat-card-title>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary">Click on me !</button>
+  </mat-card-actions>
+</mat-card>
