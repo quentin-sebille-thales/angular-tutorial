@@ -18,9 +18,9 @@ export class TeamPageComponent implements OnInit {
    */
   teamTricoteuses: Team;
   /**
-   * Message à propos d'une équipe
+   * Rumeurs à propos d'une équipe
    */
-  evaluationMessage: string;
+  rumorsMessage: string;
 
   constructor(private teamService: TeamService) {}
 
@@ -41,13 +41,13 @@ export class TeamPageComponent implements OnInit {
   }
 
   displayEvaluation(team: Team): void {
-    this.evaluationMessage = this._evaluateTeam(team);
+    this.rumorsMessage = this._buildRumors(team);
   }
 
   /**
    * Renvoie un message à propos d'une équipe
    */
-  private _evaluateTeam(team: Team): string {
+  private _buildRumors(team: Team): string {
     if (team.id == 1) {
       return ""
     }
