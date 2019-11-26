@@ -27,4 +27,13 @@ export class TeamCardComponent implements OnInit {
       this.teamName !== undefined &&
       this.teamName !== "";
   }
+
+/**
+ * Action déclenchée lors du clic sur le bouton "Est-ce une super équipe ?"
+ */
+  onClickIsBestTeam(): void {
+
+  }
+
+
 }

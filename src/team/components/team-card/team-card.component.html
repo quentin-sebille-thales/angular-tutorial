@@ -1,7 +1,10 @@
-<mat-card *ngIf="displayComponent">
-	<mat-card-title>Voici l'équipe : {{ teamName }}</mat-card-title>
+<mat-card *ngIf="displayComponent" class="mat-elevation-z3 team-card">
+	<mat-card-title>{{ teamName }}</mat-card-title>
+	<mat-card-subtitle>{{ teamName }}</mat-card-subtitle>
 
-  <mat-card-actions>
-    <button mat-raised-button color="primary">Click on me !</button>
-  </mat-card-actions>
+	<mat-card-actions>
+		<button mat-raised-button color="primary" (click)="onClickIsBestTeam()">
+      Est-ce une super équipe ?
+      </button>
+	</mat-card-actions>
 </mat-card>
