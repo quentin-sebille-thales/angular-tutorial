@@ -33,5 +33,6 @@ export class TeamPageComponent implements OnInit {
       "Les plus grands fans de Nicolas Copernic",
       TeamDomain.Offre
     );
+    this.teamService.refreshTeamList();
   }
 }

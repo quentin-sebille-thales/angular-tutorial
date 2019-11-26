@@ -1,9 +1,10 @@
 <h1>Voici la liste des équipes</h1>
 
-<!-- Liste des équipes (sans service) -->
+<!-- Liste des équipes (sans service)
 <app-team-card [team]="teamQuiproquos"></app-team-card>
 <app-team-card [team]="teamTricoteuses"></app-team-card>
 <app-team-card></app-team-card>
-
+ -->
 
 <!-- Liste des équipes (avec service) -->
+<app-team-card *ngFor="let team of teamService.teamList" [team]="team"></app-team-card>

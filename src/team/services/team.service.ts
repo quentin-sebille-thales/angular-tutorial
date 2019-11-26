@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 
+
 import { Team } from "../models/team";
 import { TEAM_LIST } from '../assets/team-list';
 
@@ -12,7 +13,7 @@ export class TeamService {
 
   constructor() {  }
 
-  refreshTeamList() {
+  refreshTeamList() : void {
     this.teamList = TEAM_LIST;
   }
 
