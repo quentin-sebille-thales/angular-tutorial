@@ -16,14 +16,14 @@ export class TeamCardComponent implements OnInit {
    */
   displayComponent: boolean;
   /**
-   * Evénement emis lors de l'évaluation de l'équipe.
+   * Evénement émis lors du clic sur le bouton rumeurs
    */
-  @Output() evaluate: EventEmitter<Team>;
+  @Output() rumors: EventEmitter<Team>;
 
   constructor() {
     console.log("Equipe (Constructor) : " + this.team);
     this.displayComponent = true;
-    this.evaluate = new EventEmitter();
+    this.rumors = new EventEmitter();
   }
 
   ngOnInit(): void {
@@ -32,10 +32,10 @@ export class TeamCardComponent implements OnInit {
   }
 
   /**
-   * Action déclenchée lors du clic sur le bouton "Evaluer"
+   * Action déclenchée lors du clic sur le bouton "Rumeurs"
    */
-  onClickEvaluate(): void {
-    this.evaluate.emit(this.team);
+  onClickShowRumors(): void {
+    this.rumors.emit(this.team);
   }
 
 }

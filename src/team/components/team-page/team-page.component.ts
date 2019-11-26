@@ -48,8 +48,11 @@ export class TeamPageComponent implements OnInit {
    * Renvoie un message à propos d'une équipe
    */
   private _evaluateTeam(team: Team): string {
+    if (team.id == 1) {
+      return ""
+    }
     if (team.id == 2) {
-      return "Certains membres sont des professionnels de la roue (vidéo à l'appui)";
+      return "Une vidéo de roue circulerait sur un des membres de cette équipe";
     }
 
     return "Pas de rumeur sur cette équipe";
