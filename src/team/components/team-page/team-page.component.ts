@@ -20,17 +20,17 @@ export class TeamPageComponent implements OnInit {
 
   constructor(private teamService: TeamService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.teamQuiproquos = new Team(
       1,
       "Quiproquos",
       "Une super équipe !",
       TeamDomain.Offre
     );
-    this.teamQuiproquos = new Team(
-      1,
-      "Quiproquos",
-      "Une super équipe !",
+    this.teamTricoteuses = new Team(
+      2,
+      "Tricoteuses",
+      "Les plus grands fans de Nicolas Copernic",
       TeamDomain.Offre
     );
   }

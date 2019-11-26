@@ -1,10 +1,10 @@
 <mat-card *ngIf="displayComponent" class="mat-elevation-z3 team-card">
-	<mat-card-title>{{ teamName }}</mat-card-title>
-	<mat-card-subtitle>{{ teamName }}</mat-card-subtitle>
+	<mat-card-title>{{ team.name }}</mat-card-title>
+	<mat-card-subtitle>{{ team.description }}</mat-card-subtitle>
 
 	<mat-card-actions>
 		<button mat-raised-button color="primary" (click)="onClickEvaluate()">
       Evaluer
-      </button>
+    </button>
 	</mat-card-actions>
 </mat-card>

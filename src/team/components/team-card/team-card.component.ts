@@ -17,12 +17,12 @@ export class TeamCardComponent implements OnInit {
   displayComponent: boolean;
 
   constructor() {
-    console.log("Nom de l'équipe (Constructor) : " + this.team.name);
+    console.log("Equipe (Constructor) : " + this.team);
     this.displayComponent = true;
   }
 
   ngOnInit(): void {
-    console.log("Nom de l'équipe (OnInit) : " + this.team.name);
+    console.log("Equipe (OnInit) : " + this.team);
     this.displayComponent =
       this.team !== null &&
       this.team !== undefined;
