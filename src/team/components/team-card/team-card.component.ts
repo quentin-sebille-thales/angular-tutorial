@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
+import { Team } from "../../models/team";
 
 @Component({
   selector: "app-team-card",
@@ -9,30 +10,29 @@ export class TeamCardComponent implements OnInit {
   /**
    * Nom de l'équipe
    */
-  @Input() teamName: string;
+  @Input() team: Team;
   /**
    * Le composant doit-il être affiché ?
    */
   displayComponent: boolean;
 
   constructor() {
-    console.log("Nom de l'équipe (Constructor) : " + this.teamName);
+    console.log("Nom de l'équipe (Constructor) : " + this.team.name);
     this.displayComponent = true;
   }
 
   ngOnInit(): void {
-    console.log("Nom de l'équipe (OnInit) : " + this.teamName);
+    console.log("Nom de l'équipe (OnInit) : " + this.team.name);
     this.displayComponent =
-      this.teamName !== null &&
-      this.teamName !== undefined &&
-      this.teamName !== "";
+      this.team !== null &&
+      this.team !== undefined;
   }
 
 /**
  * Action déclenchée lors du clic sur le bouton "Evaluer"
  */
   onClickEvaluate(): void {
-    
+
   }
 
 
