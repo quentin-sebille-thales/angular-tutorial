@@ -1,4 +1,6 @@
-<h1>Voici la liste des équipes</h1>
+<h1>Liste des équipes du projet</h1>
+
+
 
 <!-- Liste des équipes (sans service)
 <app-team-card [team]="teamQuiproquos"></app-team-card>
@@ -7,4 +9,5 @@
  -->
 
 <!-- Liste des équipes (avec service) -->
-<app-team-card *ngFor="let team of teamService.teamList" [team]="team"></app-team-card>
+<app-team-card *ngFor="let team of teamService.teamList" [team]="team" (evaluate)="displayEvaluation($event)">
+</app-team-card>
