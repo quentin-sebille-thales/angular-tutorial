@@ -2,18 +2,15 @@
 	<mat-card-title-group>
 		<mat-card-title *ngIf="displayTaskName">{{ task.name }}</mat-card-title>
 		<mat-card-title *ngIf="!displayTaskName" class="no-name-task">Tâche sans nom</mat-card-title>
-		<mat-card-header># {{ task.id }}</mat-card-header>
+		<mat-card-header>
+			<mat-slider [disabled]="true" [min]="0" [max]="10" [value]="task.difficulty"></mat-slider>
+		</mat-card-header>
 	</mat-card-title-group>
 
-  <mat-card-content>{{ task.description }}</mat-card-content>
+	<mat-card-content>{{ task.description }}</mat-card-content>
 
-  <mat-card-content>
-    <h4>Difficulté </h4>
-    {{ task.difficulty }}
-    </mat-card-content>
-
-  <mat-card-actions>
-    <button mat-button color="primary">Editer</button>
-    <button mat-button color="accent">Supprimer</button>
-  </mat-card-actions>
+	<mat-card-actions>
+		<button mat-button color="primary">Editer</button>
+		<button mat-button color="accent">Supprimer</button>
+	</mat-card-actions>
 </mat-card>
