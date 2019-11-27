@@ -20,6 +20,7 @@ export class TaskService {
     this.currentTask = new Task();
     this.currentTask.id = this.list.length;
     this.list.push(this.currentTask);
+    console.log(this.list);
   }
 
 }
