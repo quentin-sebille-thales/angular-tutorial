@@ -25,7 +25,6 @@ export class TaskPageComponent implements OnInit {
     this.displayAddTaskForm = true;
     this.taskToAdd = new Task();
     this.taskToAdd.id = this.taskService.list.length;
-    this.taskToAdd.name = "test";
   }
 
   onFormPanelClosed():void{

@@ -5,6 +5,13 @@
 		<mat-card-header># {{ task.id }}</mat-card-header>
 	</mat-card-title-group>
 
+  <mat-card-content>{{ task.description }}</mat-card-content>
+
+  <mat-card-content>
+    <h4>Difficulté </h4>
+    {{ task.difficulty }}
+    </mat-card-content>
+
   <mat-card-actions>
     <button mat-button color="primary">Editer</button>
     <button mat-button color="accent">Supprimer</button>
