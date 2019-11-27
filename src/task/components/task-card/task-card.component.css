@@ -1,0 +1,8 @@
+.task-card {
+  margin-top: 10px;
+}
+
+.no-name-task {
+  color: grey;
+  font-style: italic;
+}

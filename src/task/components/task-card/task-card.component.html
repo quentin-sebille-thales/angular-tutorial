@@ -1,6 +1,10 @@
-<mat-card *ngIf="displayCard">
-  <mat-card-title-group>
-    <mat-card-title *ngIf="displayTaskName">{{ task.name }}</mat-card-title>
-    <mat-card-title *ngIf="!displayTaskName">Tâche sans nom</mat-card-title>
-  </mat-card-title-group>
+<mat-card *ngIf="displayTask" class="task-card">
+	<mat-card-title-group>
+		<mat-card-title *ngIf="displayTaskName">{{ task.name }}</mat-card-title>
+		<mat-card-title *ngIf="!displayTaskName" class="no-name-task">Tâche sans nom</mat-card-title>
+		<mat-card-header># {{ task.id }}</mat-card-header>
+	</mat-card-title-group>
+
+  <mat-card-actions>
+  </mat-card-actions>
 </mat-card>
