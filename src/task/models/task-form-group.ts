@@ -39,7 +39,7 @@ export class TaskFormGroup extends FormGroup {
   /**
    * Charge les controles à partir d'une tâche
    */
-  loadControlsFromTask(task: Task): void {
+  public loadControlsFromTask(task: Task): void {
     if (task.name !== undefined) {
       this.controls.name.setValue(task.name);
     }

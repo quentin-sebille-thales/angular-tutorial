@@ -23,5 +23,6 @@ export class TaskFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.taskFormGroup.loadControlsFromTask(this.task);
   }
 }
