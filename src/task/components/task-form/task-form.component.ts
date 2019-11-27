@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from "@angular/core";
-import {FormGroup, FormBuilder} from "@angular/forms";
+import { FormGroup, FormBuilder } from "@angular/forms";
 import { Task } from "../../models/task";
+import { TaskFormGroup } from "../../models/task-form-group";
 
 @Component({
   selector: "app-task-form",
@@ -15,14 +16,12 @@ export class TaskFormComponent implements OnInit {
   /**
    * FormGroup
    */
-  taskFormGroup : FormGroup;
-  
+  taskFormGroup: TaskFormGroup;
 
-  constructor(private builder : FormBuilder) {
-    this.taskFormGroup = builder.group(
-      name: builder.control("");
-    );
+  constructor(private builder: FormBuilder) {
+    this.taskFormGroup = new TaskFormGroup();
   }
 
-  ngOnInit() : void {}
+  ngOnInit(): void {
+  }
 }
