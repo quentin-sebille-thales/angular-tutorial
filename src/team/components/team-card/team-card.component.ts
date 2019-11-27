@@ -21,13 +21,13 @@ export class TeamCardComponent implements OnInit {
   @Output() onSelect: EventEmitter<string>;
 
   constructor() {
-    console.log("Equipe (Constructor) : " + this.team);
+    console.log("Equipe (Constructor) : ", this.team);
     this.displayComponent = true;
     this.onSelect = new EventEmitter();
   }
 
   ngOnInit(): void {
-    console.log("Equipe (OnInit) : " + this.team);
+    console.log("Equipe (OnInit) : ", this.team);
     this.displayComponent = this.team !== null && this.team !== undefined;
   }
 
