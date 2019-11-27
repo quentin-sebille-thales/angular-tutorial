@@ -5,3 +5,7 @@
 .task-form-container > * {
   width: 95%;
 }
+
+.example-button-row button{
+  margin-right: 8px;
+}

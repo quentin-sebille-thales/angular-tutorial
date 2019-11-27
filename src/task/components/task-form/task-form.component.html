@@ -16,14 +16,16 @@
 				<mat-hint>Merci de choisir une difficulté entre 0 et 10</mat-hint>
 			</mat-form-field>
 
+
 	</div>
 
-
+<div class="button-row">
 	<button mat-raised-button color="primary" [disabled]="taskFormGroup.invalid" (click)="onCLickValidate()">
     Valider
   </button>
 	<button mat-raised-button color="accent" (click)="onClickCancel()">
     Annuler
   </button>
+</div>
 
 </form>
