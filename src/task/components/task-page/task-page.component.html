@@ -7,10 +7,10 @@
 </button>
 
 <!-- Formulaire d'ajout d'une tache -->
-<div *ngIf="displayAddTaskForm">
+<mat-card *ngIf="displayAddTaskForm" class="mat-elevation-z5 add-form-card">
   <h3>Ajout d'une tâche</h3>
   <app-task-form></app-task-form>
-</div>
+</mat-card>
 
 
 <!-- Liste des tâches -->
