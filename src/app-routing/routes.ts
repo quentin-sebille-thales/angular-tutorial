@@ -3,7 +3,7 @@ import { TeamPageComponent } from "../team/components/team-page/team-page.compon
 import { TaskPageComponent } from "../task/components/task-page/task-page.component";
 
 export const routes: Routes = [
-  { path: "", redirectTo: "/task", pathMatch: "full" },
+  { path: "", redirectTo: "/team", pathMatch: "full" },
   { path: "team", component: TeamPageComponent },
   { path: "task", component: TaskPageComponent }
 ];
