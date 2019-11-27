@@ -30,7 +30,7 @@ export class TaskFormComponent implements OnInit {
   }
 
   onClickValidate(): void {
-    this.taskService.add(this.taskFormGroup.save())
+    this.taskService.addTask(this.taskFormGroup.saveTask())
     this.closure.emit();
   }
 
