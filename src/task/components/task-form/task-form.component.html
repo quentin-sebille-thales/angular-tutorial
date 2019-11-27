@@ -1,7 +1,15 @@
 <form [formGroup]="taskFormGroup">
 
-  <mat-form-field>
-    <input matInput placeholder="Nom de la tâche">
-  </mat-form-field>
+	<div class="task-form-container">
+
+		<mat-form-field>
+			<input matInput placeholder="Nom de la tâche"/>
+    </mat-form-field>
+
+		<mat-form-field>
+			<textarea matInput placeholder="Description"/>
+    </mat-form-field>
+    
+	</div>
 
 </form>
