@@ -26,7 +26,7 @@ export class ExampleComponent implements OnInit {
   constructor(private exampleService: ExampleService) {}
 
   /**
-   * Fonction appelée à l'initialisation du composant
+   * Méthode appelée à l'initialisation du composant (OnInit).
    */
   ngOnInit(): void {}
 }
