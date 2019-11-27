@@ -9,7 +9,7 @@
 <!-- Formulaire d'ajout d'une tache -->
 <mat-card *ngIf="displayAddTaskForm" class="mat-elevation-z5 add-form-card">
   <h3>Ajout d'une tâche</h3>
-  <app-task-form></app-task-form>
+  <app-task-form [task]="taskToAdd" (closure)="onFormPanelClosed()"></app-task-form>
 </mat-card>
 
 
