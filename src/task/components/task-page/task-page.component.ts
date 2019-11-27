@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TaskService} from "../../services/task.service";
 
 @Component({
   selector: 'app-task-page',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(public taskService: TaskService) { }
 
-  ngOnInit() {
+  ngOnInit() : void {
+  }
+
+/**
+ * Action déclenchée lors du clic sur le bouton "Ajouter une tâche"
+ */
+  onClickAddTask(): void {
+    
   }
 
 }
