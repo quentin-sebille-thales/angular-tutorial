@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { FormGroup, FormBuilder } from "@angular/forms";
 import { Task } from "../../models/task";
 import { TaskFormGroup } from "../../models/task-form-group";
+import {TaskService} from "../../services/task.service";
 
 @Component({
   selector: "app-task-form",
@@ -19,12 +20,21 @@ export class TaskFormComponent implements OnInit {
   taskFormGroup: TaskFormGroup;
   @Output() closure: EventEmitter<any>;
 
-  constructor(private builder: FormBuilder) {
+  constructor(private builder: FormBuilder, private taskService: TaskService) {
     this.taskFormGroup = new TaskFormGroup();
     this.closure = new EventEmitter();
   }
 
   ngOnInit(): void {
     this.taskFormGroup.loadControlsFromTask(this.task);
+  }
+
+  onClickValidate(): void {
+    this.taskService.add(this.taskFormGroup.save())
+    this.closure.emit();
+  }
+
+  onClickCancel(): void {
+    this.closure.emit();
   }
 }
