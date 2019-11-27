@@ -7,8 +7,11 @@ import {TaskService} from "../../services/task.service";
   styleUrls: ['./task-page.component.css']
 })
 export class TaskPageComponent implements OnInit {
+  displayAddTaskForm: boolean;
 
-  constructor(public taskService: TaskService) { }
+  constructor(public taskService: TaskService) {
+    this.displayAddTaskForm = false;
+   }
 
   ngOnInit() : void {
   }
@@ -17,6 +20,7 @@ export class TaskPageComponent implements OnInit {
  * Action déclenchée lors du clic sur le bouton "Ajouter une tâche"
  */
   onClickAddTask(): void {
+    this.displayAddTaskForm = true;
     this.taskService.addTask();
   }
 

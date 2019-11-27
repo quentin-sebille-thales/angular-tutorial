@@ -1,9 +1,17 @@
 <h2>Gestion des tâches</h2>
 
+<!-- Bouton "Ajouter une tache" -->
 <button mat-raised-button color="primary" (click)="onClickAddTask()">
   <mat-icon>exposure_plus_1</mat-icon> &nbsp;
   Ajouter une tâche
 </button>
+
+<!-- Formulaire d'ajoute -->
+<div *ngIf="displayAddTaskForm">
+  <h3>Ajout d'une tâche</h3>
+</div>
+
+
 
 
 <!-- Liste des tâches -->
