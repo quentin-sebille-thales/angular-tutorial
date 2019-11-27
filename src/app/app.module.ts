@@ -1,14 +1,19 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
-import { TeamModule } from '../team/team.module';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { AppRoutingModule } from "../app-routing/app-routing.module";
+import { TeamModule } from "../team/team.module";
 
-import { AppComponent } from './app.component';
+import { AppComponent } from "./app.component";
 
 @NgModule({
-  imports:      [ BrowserModule, BrowserAnimationsModule, FormsModule, TeamModule ],
-  declarations: [ AppComponent ],
-  bootstrap:    [ AppComponent ]
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    TeamModule,
+    AppRoutingModule
+  ],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
