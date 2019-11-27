@@ -3,13 +3,27 @@
 	<div class="task-form-container">
 
 		<mat-form-field>
-			<input matInput placeholder="Nom de la tâche">
+			<input matInput placeholder="Nom de la tâche" [formControl]="taskFormGroup.controls.name" [required]="true">
     </mat-form-field>
 
-		<mat-form-field>
-			<textarea matInput placeholder="Description"></textarea>
-    </mat-form-field>
-    
+
+			<mat-form-field>
+				<textarea matInput placeholder="Description"[formControl]="taskFormGroup.controls.description"></textarea>
+			</mat-form-field>
+
+			<mat-form-field>
+				<input matInput placeholder="Choisissez une difficulté"[formControl]="taskFormGroup.controls.difficulty">
+				<mat-hint>Merci de choisir une difficulté entre 0 et 10</mat-hint>
+			</mat-form-field>
+
 	</div>
+
+
+	<button mat-raised-button color="primary" [disabled]="taskFormGroup.invalid" (click)="onCLickValidate()">
+    Valider
+  </button>
+	<button mat-raised-button color="accent" (click)="onClickCancel()">
+    Annuler
+  </button>
 
 </form>
