@@ -9,17 +9,13 @@ export {
 
 export class TaskFormGroup extends FormGroup {
   controls: {
-    name: FormControl;
-    description: FormControl;
-    difficulty: FormControl;
+    name: FormControl,
+    description: FormControl,
+    difficulty: FormControl
   };
 
   constructor(
-    validatorOrOpts?:
-      | ValidatorFn
-      | ValidatorFn[]
-      | AbstractControlOptions
-      | null,
+    validatorOrOpts?: ValidatorFn | ValidatorFn[] | AbstractControlOptions | null,
     asyncValidator?: AsyncValidatorFn | AsyncValidatorFn[] | null
   ) {
     const controls = {
