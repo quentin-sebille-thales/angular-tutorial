@@ -17,7 +17,7 @@ export class TaskPageComponent implements OnInit {
  * Action déclenchée lors du clic sur le bouton "Ajouter une tâche"
  */
   onClickAddTask(): void {
-    
+    this.taskService.addTask();
   }
 
 }

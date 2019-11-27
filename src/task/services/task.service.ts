@@ -19,6 +19,7 @@ export class TaskService {
   public addTask(): void {
     this.currentTask = new Task();
     this.currentTask.id = this.list.length;
+    this.list.push(this.currentTask);
   }
 
 }
