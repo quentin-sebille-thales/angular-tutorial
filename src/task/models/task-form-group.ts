@@ -43,7 +43,7 @@ export class TaskFormGroup extends FormGroup {
    * Charge les controles à partir d'une tâche
    */
   public loadControlsFromTask(task: Task): void {
-    this.controls.id = task.id;
+    this.controls.id.setValue(task.id);
     if (task.name !== undefined) {
       this.controls.name.setValue(task.name);
     }
@@ -56,11 +56,11 @@ export class TaskFormGroup extends FormGroup {
   }
 
   public saveTask(): Task{
-    return new Task(
-      this.controls.id.value,
-      this.controls.name.value,
-      this.controls.description.value,
-      this.controls.difficulty.value
-    );
-  }
+    let result = new Task();
+    result.id = this.controls.id.value;
+    result.name = this.controls.name.value;
+    result.description = this.controls.description.value;
+    result.difficulty = this.controls.difficulty.value;
+    return result;
+  }s
  }

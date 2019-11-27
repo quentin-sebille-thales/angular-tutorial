@@ -9,7 +9,7 @@ export class TaskService {
     this.list = [];
   }
 
-  pubaddTask(task: Task): void {
+  public addTask(task: Task): void {
     this.list.push(task);
   }
 }
