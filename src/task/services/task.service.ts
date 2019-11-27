@@ -11,7 +11,7 @@ export class TaskService {
     this.list.push(new Task());
     this.list[0].id = 0;
     this.list[0].name = "Faire la roue";
-    this.list[0].description = "Aller voir Michaël Ayeng pour apprendre"
+    this.list[0].description = "Aller voir Michaël Ayeng pour apprendre les meilleures techniques"
     this.list[0].difficulty = 6;
     this.list[1].id = 1;
     this.list[1].name = "Apporter les croissants";
